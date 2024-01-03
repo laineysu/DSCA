@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package calc;
+package meetingTime;
 
 service CalcService {
   rpc add(CalcRequest) returns (CalcResponse) {}

@@ -7,26 +7,26 @@
   <body>
     <h1><%= title %></h1>
 
-    <a href="/">Add</a>
-    <a href="/subtract">Subtract</a>
-    <a href="/multiply">Multiply</a>
-    <a href="/divide">Divide</a>
+    <a href="/">Total meeting duration<br></a>
+    <a href="/subtract">Change meeting duration <br></a>
+    <a href="/multiply">Calculate recurring meeting <br></a>
+    <a href="/divide">Calculate number of meetings required <br></a>
 
     <% if(error) { %>
       <%= error %>
     <% } %>
 
     <form action="/" method="get">
-      <label for="number1">Num1</label>
+      <label for="number1">Meeting 1 duration (mins)</label>
       <input type="number" name="number1">
       <br/>
-      <label for="number2">Num2</label>
+      <label for="number2">Meeting 2 duration (mins)</label>
       <input type="number" name="number2">
-      <button type="submit">Add!</button>
+      <button type="submit">Calculate!</button>
     </form>
 
     <% if(!isNaN(result)) { %>
-      <b>ANS:</b><%= result %>
+      <b>Total meeting duration:</b><%= result %>
     <% } %>
 
 

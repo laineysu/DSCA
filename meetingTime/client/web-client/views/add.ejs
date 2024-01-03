@@ -7,16 +7,16 @@
   <body>
     <h1><%= title %></h1>
     <form action="/" method="get">
-      <label for="num1">Num1</label>
+      <label for="num1">Meeting 1 duration (mins)</label>
       <input type="number" name="num1">
       <br/>
-      <label for="num2">Num2</label>
+      <label for="num2">Meeting 2 duration (mins)</label>
       <input type="number" name="num2">
-      <button type="submit">Add!</button>
+      <button type="submit">Calculate!</button>
     </form>
 
     <% if(result !== undefined) { %>
-      <b>ANS:</b><%= result %>
+      <b>Total meeting time</b><%= result %>
     <% } %>
 
   </body>

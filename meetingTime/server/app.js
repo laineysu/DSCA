@@ -1,10 +1,10 @@
 var grpc = require("@grpc/grpc-js")
 var protoLoader = require("@grpc/proto-loader")
-var PROTO_PATH = __dirname + "/protos/calc.proto"
+var PROTO_PATH = __dirname + "/protos/meetingTime.proto"
 var packageDefinition = protoLoader.loadSync(
   PROTO_PATH
 )
-var calc_proto = grpc.loadPackageDefinition(packageDefinition).calc
+var meetingTime_proto = grpc.loadPackageDefinition(packageDefinition).meetingTime
 
 
 function add(call, callback) {
@@ -100,7 +100,7 @@ function divide(call, callback) {
 }
 
 var server = new grpc.Server()
-server.addService(calc_proto.CalcService.service, {
+server.addService(meetingTime_proto.CalcService.service, {
   add: add,
   subtract: subtract,
   multiply: multiply,
