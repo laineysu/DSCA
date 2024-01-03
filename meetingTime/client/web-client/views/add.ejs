@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/" method="get">
+      <label for="num1">Num1</label>
+      <input type="number" name="num1">
+      <br/>
+      <label for="num2">Num2</label>
+      <input type="number" name="num2">
+      <button type="submit">Add!</button>
+    </form>
+
+    <% if(result !== undefined) { %>
+      <b>ANS:</b><%= result %>
+    <% } %>
+
+  </body>
+</html>
